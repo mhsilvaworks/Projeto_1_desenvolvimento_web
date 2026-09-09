@@ -1,0 +1,153 @@
+
+:root {
+  --cor-1: #8feee0; 
+  
+}
+logo{
+    display: inline-block;
+}
+nav{
+    display: inline-block;
+}
+.listahorizontal {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+nav a{
+
+    color:black;
+    padding: 5px;
+    text-decoration: none;
+    font-weight:bold;
+    font-size: 1.5em;
+
+}
+nav a:hover{
+    color: var(--cor-1);                
+    
+    transform: translateY(-3px);
+    
+}
+.botao-fale-conosco {
+    border: 1px solid black;
+    border-radius: 20px;
+    color: black;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+.botao-fale-conosco:hover{
+background-color: black;    
+    color: white;                
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15); 
+    transform: translateY(-3px);
+
+}
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333333;
+    background-color: whitesmoke; 
+    margin: 0;
+    padding: 0;
+}
+
+/* Títulos em destaque */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600; 
+}
+.topo {
+    background-color: white;
+    padding: 30px 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.principal{
+    padding: 60px 30px 30px 0;
+    
+}
+.texto {
+    display: flex;             /* Ativa o Flexbox, colocando os filhos lado a lado */
+    align-items: center;       /* Centraliza o texto e a imagem verticalmente */
+    justify-content: space-between; /* Distribui o espaço entre os dois blocos */
+    gap: 50px;                 /* Adiciona um respiro de 40px entre o texto e a foto */
+    padding: 40px 5%;          /* Dá um espaçamento interno na seção para não colar nas bordas */
+}
+.Imagem{
+    width: 100%;           
+    max-width: 600px;      
+    aspect-ratio: 1 / 1;   
+    object-fit: cover;    
+    border-radius: 24px;   
+    
+
+
+}
+.Imagem img{
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.249);
+}
+.texto_principal{
+    margin-top: -150px;
+    text-align: left;
+}
+.primeiro-p{
+    margin-bottom: 20px;
+    border:#00e9c6 solid  0.5px;
+    background-color: var(--cor-1) ;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.064);
+    border-radius: 5px;
+    font-weight: bold;    
+    padding: 3px;
+}
+.texto_principal h1{
+    font-size: 3em;
+}
+.descricao{
+    margin-top: 60px;
+    font-size: 1.2em;
+}
+.acoes{
+
+    display: flex;
+    align-items: center; 
+    gap: 200px;           
+    margin-top: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.botao_ver_bicicletas{
+    border: black solid 2px;
+    text-decoration: none;
+    padding: 20px;
+    color: black;
+    border-radius: 10px;
+
+}
+.botao_WhatsApp{
+    border: rgba(115, 255, 0, 0.804) solid 2px;
+    background-color: rgba(115, 255, 0, 0.804);
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
