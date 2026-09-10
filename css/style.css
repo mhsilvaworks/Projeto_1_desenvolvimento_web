@@ -1,9 +1,9 @@
-
 :root {
-  --cor-1: #8feee0; 
-  
+  --cor-1: #8feee0;
+  --cor-2: #049c8a; /* verde mais fechado, usado nos botões de ação e destaques */
+  --cor-escura: #10324a; /* azul escuro, usado em títulos e textos de apoio */
 }
-logo{
+.logo{
     display: inline-block;
 }
 nav{
@@ -26,10 +26,10 @@ nav a{
 
 }
 nav a:hover{
-    color: var(--cor-1);                
-    
+    color: var(--cor-1);
+
     transform: translateY(-3px);
-    
+
 }
 .botao-fale-conosco {
     border: 1px solid black;
@@ -42,16 +42,16 @@ nav a:hover{
     transition: all 0.3s ease;
 }
 .botao-fale-conosco:hover{
-background-color: black;    
-    color: white;                
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15); 
+background-color: black;
+    color: white;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
     transform: translateY(-3px);
 
 }
 body {
     font-family: 'Inter', sans-serif;
     color: #333333;
-    background-color: whitesmoke; 
+    background-color: whitesmoke;
     margin: 0;
     padding: 0;
 }
@@ -59,7 +59,7 @@ body {
 /* Títulos em destaque */
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600; 
+    font-weight: 600;
 }
 .topo {
     background-color: white;
@@ -68,7 +68,7 @@ h1, h2, h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 * {
     box-sizing: border-box;
@@ -82,22 +82,22 @@ img {
 }
 .principal{
     padding: 60px 30px 30px 0;
-    
+
 }
 .texto {
-    display: flex;             /* Ativa o Flexbox, colocando os filhos lado a lado */
-    align-items: center;       /* Centraliza o texto e a imagem verticalmente */
-    justify-content: space-between; /* Distribui o espaço entre os dois blocos */
-    gap: 50px;                 /* Adiciona um respiro de 40px entre o texto e a foto */
-    padding: 40px 5%;          /* Dá um espaçamento interno na seção para não colar nas bordas */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 40px 5%;
+    flex-wrap: wrap;
 }
 .Imagem{
-    width: 100%;           
-    max-width: 600px;      
-    aspect-ratio: 1 / 1;   
-    object-fit: cover;    
-    border-radius: 24px;   
-    
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 24px;
 
 
 }
@@ -106,8 +106,8 @@ img {
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.249);
 }
 .texto_principal{
-    margin-top: -150px;
     text-align: left;
+    max-width: 560px;
 }
 .primeiro-p{
     margin-bottom: 20px;
@@ -115,21 +115,22 @@ img {
     background-color: var(--cor-1) ;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.064);
     border-radius: 5px;
-    font-weight: bold;    
+    font-weight: bold;
     padding: 3px;
 }
 .texto_principal h1{
     font-size: 3em;
 }
 .descricao{
-    margin-top: 60px;
+    margin-top: 20px;
     font-size: 1.2em;
 }
 .acoes{
 
     display: flex;
-    align-items: center; 
-    gap: 200px;           
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
     margin-top: 30px;
     text-decoration: none;
     font-weight: bold;
@@ -143,11 +144,213 @@ img {
 
 }
 .botao_WhatsApp{
-    border: rgba(115, 255, 0, 0.804) solid 2px;
-    background-color: rgba(115, 255, 0, 0.804);
+    border: var(--cor-2) solid 2px;
+    background-color: var(--cor-2);
     color: white;
     text-decoration: none;
     padding: 20px;
     border-radius: 10px;
-    
+
+}
+/* ==========================================================
+   A partir daqui: estilos das seções que ainda não tinham CSS
+   (produtos, diferenciais, chamada, rodapé e botão de topo)
+   ========================================================== */
+
+/* Wrapper genérico reaproveitado em várias seções, só pra
+   limitar a largura do conteúdo e não deixar tudo colado
+   nas bordas da tela em telas grandes. */
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.produtos, .beneficios {
+    padding: 64px 0;
+}
+
+.produtos h2, .beneficios h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Grid de 3 colunas reaproveitado tanto nos cartões de produto
+   quanto nos cartões de diferenciais. */
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Cartão de produto (seção "Modelos em destaque") */
+.produto {
+    background-color: white;
+    border: 1px solid #e3e8ec;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.produto_imagem {
+    aspect-ratio: 4 / 3;
+    background-color: var(--cor-escura);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.produto h3 {
+    font-size: 1.05rem;
+    padding: 16px 20px 4px;
+}
+
+.produto p {
+    color: #52616f;
+    padding: 0 20px 20px;
+}
+
+/* Cartão de diferencial (seção "Por que famílias escolhem a SoftBike") */
+.cartao {
+    background-color: white;
+    border: 1px solid #e3e8ec;
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.numero_cartao {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--cor-2);
+}
+
+.cartao h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.cartao p {
+    color: #52616f;
+}
+
+/* Seção de chamada para ação (WhatsApp) */
+.chamada {
+    background-color: var(--cor-escura);
+    color: white;
+    padding: 56px 0;
+    text-align: center;
+}
+
+.chamada__conteudo h2 {
+    color: white;
+    margin-bottom: 12px;
+}
+
+.chamada__conteudo p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 24px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.15s ease;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+}
+
+.botao--primario {
+    background-color: var(--cor-2);
+    color: white;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #0b2436;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 48px 0 24px;
+}
+
+.rodape__conteudo {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.4fr;
+    gap: 32px;
+}
+
+.logo--rodape {
+    margin-bottom: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.logo--rodape span {
+    color: var(--cor-1);
+}
+
+.rodape h3 {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.rodape__lista {
+    list-style: none;
+}
+
+.rodape__lista li {
+    margin-bottom: 6px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* Botão flutuante "voltar ao topo". Começa escondido — quem
+   controla quando ele aparece (rolagem da página) é o JavaScript,
+   que ainda vai ser feito à parte. Aqui só deixamos o visual pronto. */
+.botao-topo {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--cor-escura);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.botao-topo.visivel {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.botao-topo:hover {
+    transform: translateY(-3px);
+}
+
+/* Empilha os cartões em telas estreitas, já que ainda não
+   temos o menu mobile (isso depende do JavaScript). */
+@media (max-width: 768px) {
+    .cartoes {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape__conteudo {
+        grid-template-columns: 1fr;
+    }
 }
