@@ -16,7 +16,8 @@
         <a href="#topo" class="logo">
             <img src="img/LogoSoftBike.jpeg" alt="Logo SoftBike">
         </a>
-        <nav>
+        <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false" hidden>Menu</button>
+        <nav id="menu-principal" aria-label="Navegação principal">
             <ul class="listahorizontal">
                 <li><a href="#topo">Início</a></li>
                 <li><a href="#produtos">Produtos</a></li>
@@ -48,21 +49,31 @@
     <section class="produtos" id="produtos">
         <div class="container">
             <h2>Modelos em destaque</h2>
+            <div class="filtro-modelos" hidden>
+                <label for="faixa-etaria">Filtrar por idade</label>
+                <select id="faixa-etaria">
+                    <option value="todos">Todas as idades</option>
+                    <option value="2-4">2 a 4 anos</option>
+                    <option value="5-7">5 a 7 anos</option>
+                    <option value="8-11">8 a 11 anos</option>
+                </select>
+                <p id="resultado-modelos" role="status"></p>
+            </div>
 
             <div class="cartoes">
-                <article class="produto">
+                <article class="produto" data-faixa="2-4">
                     <div class="produto_imagem"><span>Aro 12</span></div>
                     <h3>Aro 12 — Primeiros pedais</h3>
                     <p>Ideal para os primeiros pedais, de 2 a 4 anos.</p>
                 </article>
 
-                <article class="produto">
+                <article class="produto" data-faixa="5-7">
                     <div class="produto_imagem"><span>Aro 16</span></div>
                     <h3>Aro 16 — Infantil</h3>
                     <p>Equilíbrio e diversão para crianças de 5 a 7 anos.</p>
                 </article>
 
-                <article class="produto">
+                <article class="produto" data-faixa="8-11">
                     <div class="produto_imagem"><span>Aro 20</span></div>
                     <h3>Aro 20 — Juvenil</h3>
                     <p>Mais autonomia para os pedais de 8 a 11 anos.</p>
@@ -125,7 +136,7 @@
             </div>
         </div>
     </footer>
-    <button id="botaoTopo" class="botao-topo" aria-label="Voltar ao topo">↑</button>
+    <button id="botaoTopo" class="botao-topo" type="button" hidden aria-label="Voltar ao topo">↑</button>
     <script src="script.js"></script>
 </body>
 </html>

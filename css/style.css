@@ -316,7 +316,7 @@ img {
 
 /* Botão flutuante "voltar ao topo". Começa escondido — quem
    controla quando ele aparece (rolagem da página) é o JavaScript,
-   que ainda vai ser feito à parte. Aqui só deixamos o visual pronto. */
+   que controla sua visibilidade após a primeira tela de rolagem. */
 .botao-topo {
     position: fixed;
     right: 24px;
@@ -353,4 +353,38 @@ img {
     .rodape__conteudo {
         grid-template-columns: 1fr;
     }
+}
+
+/* Conteúdo continua disponível se o JavaScript não carregar. */
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+
+.menu-toggle, .filtro-modelos select {
+    min-height: 44px;
+    padding: 10px 16px;
+    border: 1px solid var(--cor-escura);
+    border-radius: 10px;
+    background: white;
+    color: var(--cor-escura);
+    font: inherit;
+}
+.menu-toggle { cursor: pointer; }
+.filtro-modelos { margin-bottom: 24px; }
+.filtro-modelos label { display: block; margin-bottom: 8px; font-weight: 700; }
+.filtro-modelos p { margin-top: 8px; }
+.filtro-modelos select { max-width: 100%; }
+
+@media (max-width: 768px) {
+    .topo { gap: 16px; }
+    .topo nav { order: 3; width: 100%; }
+    .topo .listahorizontal { flex-direction: column; gap: 8px; }
+    .topo nav a { display: block; min-height: 44px; }
+    .texto_principal { min-width: 0; }
+    .texto_principal h1 { font-size: clamp(2rem, 8vw, 3rem); overflow-wrap: break-word; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; animation: none !important; }
 }
