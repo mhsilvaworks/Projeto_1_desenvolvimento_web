@@ -99,7 +99,6 @@ img {
     object-fit: cover;
     border-radius: 24px;
 
-
 }
 .Imagem img{
     border-radius: 20px;
@@ -346,7 +345,7 @@ img {
 /* Empilha os cartões em telas estreitas, já que ainda não
    temos o menu mobile (isso depende do JavaScript). */
 @media (max-width: 768px) {
-    .cartoes {
+    .cartoes, .galeria-grid {
         grid-template-columns: 1fr;
     }
 
@@ -399,4 +398,20 @@ img {
     margin: 20px 0;
     font-style: italic;
     background-color: var(--cor-1);
+}
+
+/* Grade de fotos da página Galeria — reaproveita o mesmo
+   espaçamento em grade de 3 colunas usado em .cartoes, mas
+   com um gap menor porque são só fotos, sem texto dentro. */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 40px 5%;
+}
+
+.galeria-grid img {
+    border-radius: 12px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
 }
