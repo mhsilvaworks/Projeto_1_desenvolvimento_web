@@ -354,3 +354,49 @@ img {
         grid-template-columns: 1fr;
     }
 }
+
+.tab-cabecalho{
+    background-color: #10324a;
+    color: white;
+}
+
+.tab-secao-infantil{
+    background-color: #8feee0;
+}
+
+.tab-aro12{
+    background-color: #e3faf6;
+}
+
+.tab-aro16{
+    background-color: #fff3e2;
+}
+
+.tab-secao-juvenil{
+    background-color: #049c8a;
+    color: white;
+}
+
+.tab-aro20{
+    background-color: #e0f5f3;
+}
+
+.tab-aro24{
+    background-color: #ffe9cf;
+}
+
+.tab-secao-extra{
+    background-color: #d9e6e2;
+}
+
+.tab-extra-detalhe{
+    background-color: #f5f9f8;
+}
+
+.depoimento{
+    border-left: 4px solid var(--cor-2);
+    padding: 12px 20px;
+    margin: 20px 0;
+    font-style: italic;
+    background-color: var(--cor-1);
+}
