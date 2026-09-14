@@ -151,14 +151,7 @@ img {
     border-radius: 10px;
 
 }
-/* ==========================================================
-   A partir daqui: estilos das seções que ainda não tinham CSS
-   (produtos, diferenciais, chamada, rodapé e botão de topo)
-   ========================================================== */
 
-/* Wrapper genérico reaproveitado em várias seções, só pra
-   limitar a largura do conteúdo e não deixar tudo colado
-   nas bordas da tela em telas grandes. */
 .container {
     max-width: 1120px;
     margin: 0 auto;
@@ -174,15 +167,13 @@ img {
     margin-bottom: 40px;
 }
 
-/* Grid de 3 colunas reaproveitado tanto nos cartões de produto
-   quanto nos cartões de diferenciais. */
+
 .cartoes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
 
-/* Cartão de produto (seção "Modelos em destaque") */
 .produto {
     background-color: white;
     border: 1px solid #e3e8ec;
@@ -211,7 +202,6 @@ img {
     padding: 0 20px 20px;
 }
 
-/* Cartão de diferencial (seção "Por que famílias escolhem a SoftBike") */
 .cartao {
     background-color: white;
     border: 1px solid #e3e8ec;
@@ -400,9 +390,6 @@ img {
     background-color: var(--cor-1);
 }
 
-/* Grade de fotos da página Galeria — reaproveita o mesmo
-   espaçamento em grade de 3 colunas usado em .cartoes, mas
-   com um gap menor porque são só fotos, sem texto dentro. */
 .galeria-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -415,3 +402,22 @@ img {
     aspect-ratio: 4 / 3;
     object-fit: cover;
 }
+.titulo-centralizado {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.acoes-centralizadas {
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.botao_ver_bicicletas--branco {
+    color: white;
+    border-color: white;
+}
+
+.botao_ver_bicicletas--branco:hover {
+    background-color: white;
+    color: var(--cor-escura); }
