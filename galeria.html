@@ -1,63 +1,156 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeria - SoftBike</title>
+  <meta name="description" content="Confira a galeria completa de fotos das bicicletas SoftBike e conheça nossos modelos para todas as idades.">
+  <title>Galeria de Fotos - SoftBike</title>
+
+  <!-- Estilos e Favicon -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" href="img/FaviconSoftBike.jpeg">
+  <link rel="icon" type="image/jpeg" href="img/FaviconSoftBike.jpeg">
 </head>
 <body>
 
+  <!-- Cabeçalho Principal -->
   <header class="topo">
-    <a href="#top" class="logo">
-      <img src="img/LogoSoftBike.jpeg" alt="Logo Softbike">
+    <a href="index.html" class="logo" aria-label="Página inicial SoftBike">
+      <img src="img/LogoSoftBike.jpeg" alt="Logo SoftBike" width="150" height="50">
     </a>
-    <nav>
+    
+    <nav aria-label="Navegação principal">
       <ul class="listahorizontal">
         <li><a href="index.html">Início</a></li>
         <li><a href="empresa.html">Empresa</a></li>
         <li><a href="index.html#produtos">Produtos</a></li>
-        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="galeria.html" aria-current="page">Galeria</a></li>
         <li><a href="index.html#diferenciais">Diferenciais</a></li>
         <li><a href="parceiros.html">Parceiros</a></li>
         <li><a href="index.html#contato">Contato</a></li>
       </ul>
     </nav>
-    <a href="#contato" class="botao-fala-conosco">Fale Conosco</a>
+
+    <a href="index.html#contato" class="botao-fala-conosco">Fale Conosco</a>
   </header>
 
-    <main class="container">
-        <h1>Galeria de Fotos</h1>
+  <!-- Conteúdo Principal -->
+  <main class="container">
+    <header class="galeria-cabecalho">
+      <h1>Galeria de Fotos</h1>
+      <p>Conheça a linha completa de bicicletas SoftBike em detalhes e momentos inesquecíveis.</p>
+    </header>
 
-<div class="galeria-grid">
-      <!-- Bloco 1 (Imagens 1 a 10) -->
-      <img src="img/bike1.jpg" alt="Foto 1 - Bicicleta">
-      <img src="img/bike2.jpg" alt="Foto 2 - Bicicleta">
-      <img src="img/bike3.jpg" alt="Foto 3 - Bicicleta">
-      <img src="img/bike4.jpg" alt="Foto 4 - Bicicleta">
-      <img src="img/bike5.jpg" alt="Foto 5 - Bicicleta">
-      <img src="img/bike6.jpg" alt="Foto 6 - Bicicleta">
-      <img src="img/bike7.jpg" alt="Foto 7 - Bicicleta">
-      <img src="img/bike8.jpg" alt="Foto 8 - Bicicleta">
-      <img src="img/bike9.jpg" alt="Foto 9 - Bicicleta">
-      <img src="img/bike10.jpg" alt="Foto 10 - Bicicleta">
-      <img src="img/bike1.jpg" alt="Foto 11 - Bicicleta">
-      <img src="img/bike2.jpg" alt="Foto 12 - Bicicleta">
-      <img src="img/bike3.jpg" alt="Foto 13 - Bicicleta">
-      <img src="img/bike4.jpg" alt="Foto 14 - Bicicleta">
-      <img src="img/bike5.jpg" alt="Foto 15 - Bicicleta">
-      <img src="img/bike6.jpg" alt="Foto 16 - Bicicleta">
-      <img src="img/bike7.jpg" alt="Foto 17 - Bicicleta">
-      <img src="img/bike8.jpg" alt="Foto 18 - Bicicleta">
-      <img src="img/bike9.jpg" alt="Foto 19 - Bicicleta">
-      <img src="img/bike10.jpg" alt="Foto 20 - Bicicleta">
-      <img src="img/bike1.jpg" alt="Foto 21 - Bicicleta">
-      <img src="img/bike2.jpg" alt="Foto 22 - Bicicleta">
-      <img src="img/bike3.jpg" alt="Foto 23 - Bicicleta">
-      <img src="img/bike4.jpg" alt="Foto 24 - Bicicleta">
-      <img src="img/bike5.jpg" alt="Foto 25 - Bicicleta">
-    </div>
-    </main>
+    <section class="galeria-container" aria-label="Galeria de fotos SoftBike">
+      <div class="galeria-grid">
+        
+        <figure class="galeria-item">
+          <img src="img/bikedois.jpg" alt="Três crianças pedalando juntas em um gramado ensolarado cheio de dentes-de-leão" width="400" height="300" decoding="async">
+          <figcaption class="sr-only">Crianças se divertindo no campo com suas bicicletas</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/biketres.jpg" alt="Quatro estudantes de mochilas e capacetes parados com suas bicicletas na calçada a caminho da escola" width="400" height="300" decoding="async">
+          <figcaption class="sr-only">Estudantes indo para a escola de bicicleta</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bikequatro.jpg" alt="Três jovens pedalando juntos e sorrindo em uma pista de parque arborizado" width="400" height="300" decoding="async">
+          <figcaption class="sr-only">Grupo de jovens pedalando no parque</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bikecinco.jpg" alt="Três crianças com mochilas atravessando a faixa de pedestres com bicicleta e patinetes" width="400" height="300" decoding="async">
+          <figcaption class="sr-only">A caminho da escola com segurança na faixa de pedestres</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bikeseis.jpg" alt="Um garoto e uma garota de capacete pedalando em uma ciclovia asfaltada no campo" width="400" height="300" decoding="async">
+          <figcaption class="sr-only">Ciclistas em rodovia própria para bikes</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bikesete.jpg" alt="Menino negro sorridente com capacete cinza debruçado sobre o guidão de sua bicicleta vermelha" width="400" height="300" decoding="async">
+          <figcaption class="sr-only">Garoto feliz com sua bicicleta SoftBike</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bikeoito.jpg" alt="Dois meninos pedalando em uma rua arborizada durante o dia" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Amigos passeando de bicicleta</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bikenove.jpg" alt="Menino de capacete e mochila azul andando em uma bicicleta vermelha na rua" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Garoto indo para a escola de bicicleta</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bikedez.jpg" alt="Um garoto e uma garota tirando os pés dos pedais e brincando enquanto andam de bicicleta no parque outonal" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Diversão e liberdade ao ar livre no outono</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bikeonze.jpg" alt="Grupo de crianças de capacete pedalando em uma trilha de terra em meio às árvores" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Passeio de bicicleta infantil em trilha na natureza</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bikedoze.jpg" alt="Duas crianças de capacete pedalando em uma ciclovia arborizada" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Crianças pedalando em ciclovia ao ar livre</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/biketreze.jpg" alt="Pai ajustando o capacete de proteção no filho pequeno rindo alegremente" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Segurança e cuidado com as crianças</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bikecatorze.jpg" alt="Pai ensinando o filho pequeno a andar de bicicleta em um parque" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Aprende a andar de bicicleta em família</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bikequinze.jpg" alt="Mãe ajustando com carinho o capacete na filha pequena antes do passeio" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Ajuste de equipamento de proteção infantil</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bikedezesseis.jpg" alt="Família completa com capacetes e bicicletas reunida na rua sorrindo para a foto" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Momento em família com as bicicletas SoftBike</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bikedezessete.jpg" alt="Jovem mulher de capacete pedalando uma bicicleta urbana em uma rua residencial" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Mobilidade e estilo de vida urbano</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bikedezoito.jpg" alt="Menino de capacete sorrindo e apoiado no guidão da bicicleta no parque" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Garoto com sua bicicleta em área verde</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bikedezenove.jpg" alt="Jovem de capacete vermelho debruçada sobre o guidão ao pôr do sol" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Passeio de bicicleta no final de tarde</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bikevinte.jpg" alt="Grupo de ciclistas descansando e tomando água nas montanhas" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Pausa para hidratação durante trilha nas montanhas</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bikevinteum.jpg" alt="Casal de jovens de capacete sorrindo enquanto andam de bicicleta na floresta" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Passeio romântico de bicicleta na natureza</figcaption>
+        </figure>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <p>&copy; 2026 SoftBike. Todos os direitos reservados.</p>
+  </footer>
+
 </body>
 </html>
