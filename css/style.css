@@ -400,3 +400,16 @@ img {
     font-style: italic;
     background-color: var(--cor-1);
 }
+
+/* Classe para acessibilidade (esconde visualmente, mantém para leitores de tela) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

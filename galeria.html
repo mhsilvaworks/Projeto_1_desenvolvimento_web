@@ -1,63 +1,184 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeria - SoftBike</title>
+  <meta name="description" content="Confira a galeria de fotos das bicicletas SoftBike e conheça nossos modelos com foco no público jovem.">
+  <title>Galeria de Fotos - SoftBike</title>
+
+  <!-- Estilos e Favicon -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" href="img/FaviconSoftbike.jpeg">
+  <link rel="icon" type="image/jpeg" href="img/FaviconSoftBike.jpeg">
 </head>
 <body>
 
+  <!-- Cabeçalho Principal -->
   <header class="topo">
-    <a href="#top" class="logo">
-      <img src="img/LogoSoftbike.jpeg" alt="Logo Softbike">
+    <a href="index.html" class="logo" aria-label="Página inicial SoftBike">
+      <img src="img/LogoSoftBike.jpeg" alt="Logo SoftBike" width="150" height="50">
     </a>
-    <nav>
+    
+    <nav aria-label="Navegação principal">
       <ul class="listahorizontal">
         <li><a href="index.html">Início</a></li>
         <li><a href="empresa.html">Empresa</a></li>
         <li><a href="index.html#produtos">Produtos</a></li>
-        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="galeria.html" aria-current="page">Galeria</a></li>
         <li><a href="index.html#diferenciais">Diferenciais</a></li>
         <li><a href="parceiros.html">Parceiros</a></li>
         <li><a href="index.html#contato">Contato</a></li>
       </ul>
     </nav>
-    <a href="#contato" class="botao-fala-conosco">Fale Conosco</a>
+
+    <a href="index.html#contato" class="botao-fala-conosco">Fale Conosco</a>
   </header>
 
-    <main class="container">
-        <h1>Galeria de Fotos</h1>
+  <!-- Conteúdo Principal -->
+  <main class="container">
+    <header class="galeria-cabecalho">
+      <h1>Galeria de Fotos</h1>
+      <p>Conheça a linha completa de bicicletas SoftBike em detalhes.</p>
+    </header>
 
-<div class="galeria-grid">
-      <!-- Bloco 1 (Imagens 1 a 10) -->
-      <img src="img/bike1.jpg" alt="Foto 1 - Bicicleta">
-      <img src="img/bike2.jpg" alt="Foto 2 - Bicicleta">
-      <img src="img/bike3.jpg" alt="Foto 3 - Bicicleta">
-      <img src="img/bike4.jpg" alt="Foto 4 - Bicicleta">
-      <img src="img/bike5.jpg" alt="Foto 5 - Bicicleta">
-      <img src="img/bike6.jpg" alt="Foto 6 - Bicicleta">
-      <img src="img/bike7.jpg" alt="Foto 7 - Bicicleta">
-      <img src="img/bike8.jpg" alt="Foto 8 - Bicicleta">
-      <img src="img/bike9.jpg" alt="Foto 9 - Bicicleta">
-      <img src="img/bike10.jpg" alt="Foto 10 - Bicicleta">
-      <img src="img/bike1.jpg" alt="Foto 11 - Bicicleta">
-      <img src="img/bike2.jpg" alt="Foto 12 - Bicicleta">
-      <img src="img/bike3.jpg" alt="Foto 13 - Bicicleta">
-      <img src="img/bike4.jpg" alt="Foto 14 - Bicicleta">
-      <img src="img/bike5.jpg" alt="Foto 15 - Bicicleta">
-      <img src="img/bike6.jpg" alt="Foto 16 - Bicicleta">
-      <img src="img/bike7.jpg" alt="Foto 17 - Bicicleta">
-      <img src="img/bike8.jpg" alt="Foto 18 - Bicicleta">
-      <img src="img/bike9.jpg" alt="Foto 19 - Bicicleta">
-      <img src="img/bike10.jpg" alt="Foto 20 - Bicicleta">
-      <img src="img/bike1.jpg" alt="Foto 21 - Bicicleta">
-      <img src="img/bike2.jpg" alt="Foto 22 - Bicicleta">
-      <img src="img/bike3.jpg" alt="Foto 23 - Bicicleta">
-      <img src="img/bike4.jpg" alt="Foto 24 - Bicicleta">
-      <img src="img/bike5.jpg" alt="Foto 25 - Bicicleta">
-    </div>
-    </main>
+    <section class="galeria-container" aria-label="Galeria de produtos SoftBike">
+      <div class="galeria-grid">
+        
+        <!-- Imagens 1 a 10 -->
+        <figure class="galeria-item">
+          <img src="img/bike1.jpg" alt="Bicicleta SoftBike Modelo 1" width="400" height="300" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 1 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike2.jpg" alt="Bicicleta SoftBike Modelo 2" width="400" height="300" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 2 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike3.jpg" alt="Bicicleta SoftBike Modelo 3" width="400" height="300" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 3 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike4.jpg" alt="Bicicleta SoftBike Modelo 4" width="400" height="300" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 4 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike5.jpg" alt="Bicicleta SoftBike Modelo 5" width="400" height="300" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 5 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike6.jpg" alt="Bicicleta SoftBike Modelo 6" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 6 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike7.jpg" alt="Bicicleta SoftBike Modelo 7" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 7 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike8.jpg" alt="Bicicleta SoftBike Modelo 8" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 8 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike9.jpg" alt="Bicicleta SoftBike Modelo 9" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 9 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike10.jpg" alt="Bicicleta SoftBike Modelo 10" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 10 em exibição</figcaption>
+        </figure>
+
+        <!-- Imagens 11 a 20 -->
+        <figure class="galeria-item">
+          <img src="img/bike1.jpg" alt="Bicicleta SoftBike Modelo 11" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 11 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike2.jpg" alt="Bicicleta SoftBike Modelo 12" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 12 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike3.jpg" alt="Bicicleta SoftBike Modelo 13" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 13 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike4.jpg" alt="Bicicleta SoftBike Modelo 14" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 14 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike5.jpg" alt="Bicicleta SoftBike Modelo 15" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 15 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike6.jpg" alt="Bicicleta SoftBike Modelo 16" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 16 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike7.jpg" alt="Bicicleta SoftBike Modelo 17" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 17 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike8.jpg" alt="Bicicleta SoftBike Modelo 18" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 18 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike9.jpg" alt="Bicicleta SoftBike Modelo 19" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 19 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike10.jpg" alt="Bicicleta SoftBike Modelo 20" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 20 em exibição</figcaption>
+        </figure>
+
+        <!-- Imagens 21 a 25 -->
+        <figure class="galeria-item">
+          <img src="img/bike1.jpg" alt="Bicicleta SoftBike Modelo 21" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 21 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike2.jpg" alt="Bicicleta SoftBike Modelo 22" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 22 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike3.jpg" alt="Bicicleta SoftBike Modelo 23" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 23 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike4.jpg" alt="Bicicleta SoftBike Modelo 24" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 24 em exibição</figcaption>
+        </figure>
+
+        <figure class="galeria-item">
+          <img src="img/bike5.jpg" alt="Bicicleta SoftBike Modelo 25" width="400" height="300" loading="lazy" decoding="async">
+          <figcaption class="sr-only">Modelo SoftBike 25 em exibição</figcaption>
+        </figure>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <p>&copy; 2026 SoftBike. Todos os direitos reservados.</p>
+  </footer>
+
 </body>
 </html>
