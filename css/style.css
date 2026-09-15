@@ -182,16 +182,30 @@ img {
 }
 
 .produto_imagem {
-    aspect-ratio: 4 / 3;
+aspect-ratio: 4 / 3;
     background-color: var(--cor-escura);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    overflow: hidden; 
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
-
+.produto_imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+.produto_imagem span {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background-color: var(--cor-2);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
 .produto h3 {
     font-size: 1.05rem;
     padding: 16px 20px 4px;
