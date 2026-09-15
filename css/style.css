@@ -184,14 +184,14 @@ img {
 aspect-ratio: 4 / 3;
     background-color: var(--cor-escura);
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
 .produto_imagem img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     display: block;
 }
 .produto_imagem span {
@@ -345,8 +345,7 @@ aspect-ratio: 4 / 3;
     transform: translateY(-3px);
 }
 
-/* Empilha os cartões em telas estreitas, já que ainda não
-   temos o menu mobile (isso depende do JavaScript). */
+/* Empilha os cartões em telas estreitas */
 @media (max-width: 768px) {
     .cartoes {
         grid-template-columns: 1fr;
@@ -512,4 +511,93 @@ html { scroll-behavior: smooth; }
 
 @media (max-width: 768px) {
     .menu-ancoras ol { columns: 1; }
+}
+
+/* Botão do menu mobile (aparece só em telas pequenas, controlado pelo script.js) */
+.menu-toggle {
+    display: none;
+    border: none;
+    background-color: var(--cor-escura);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: inline-block;
+        order: 2;
+    }
+
+    .topo {
+        justify-content: space-between;
+    }
+
+    #menu-principal {
+        flex-direction: column;
+        width: 100%;
+        order: 3;
+    }
+}
+
+/* Filtro de produtos por faixa etária (ativado via JavaScript) */
+.filtro-modelos {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.filtro-modelos select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #e3e8ec;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+.filtro-modelos #resultado-modelos {
+    font-weight: 700;
+    color: var(--cor-2);
+}
+
+/* Seção de patrocinadores, na página inicial */
+.patrocinadores {
+    padding: 64px 0;
+}
+
+.patrocinadores h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.patrocinadores .cartao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.patrocinadores .cartao img {
+    max-width: 140px;
+    margin: 0 auto 12px;
+}
+
+.link-patrocinador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease;
+}
+
+.link-patrocinador:hover {
+    transform: translateY(-3px);
 }
