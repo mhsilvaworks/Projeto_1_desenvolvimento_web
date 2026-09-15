@@ -167,7 +167,6 @@ img {
     margin-bottom: 40px;
 }
 
-
 .cartoes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -319,7 +318,7 @@ aspect-ratio: 4 / 3;
 
 /* Botão flutuante "voltar ao topo". Começa escondido — quem
    controla quando ele aparece (rolagem da página) é o JavaScript,
-   que ainda vai ser feito à parte. Aqui só deixamos o visual pronto. */
+   que controla sua visibilidade após a primeira tela de rolagem. */
 .botao-topo {
     position: fixed;
     right: 24px;
@@ -349,7 +348,7 @@ aspect-ratio: 4 / 3;
 /* Empilha os cartões em telas estreitas, já que ainda não
    temos o menu mobile (isso depende do JavaScript). */
 @media (max-width: 768px) {
-    .cartoes, .galeria-grid {
+    .cartoes {
         grid-template-columns: 1fr;
     }
 
@@ -404,18 +403,6 @@ aspect-ratio: 4 / 3;
     background-color: var(--cor-1);
 }
 
-.galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    padding: 40px 5%;
-}
-
-.galeria-grid img {
-    border-radius: 12px;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-}
 .titulo-centralizado {
     text-align: center;
     width: 100%;
@@ -469,4 +456,60 @@ aspect-ratio: 4 / 3;
   height: 250px;
   object-fit: cover;
   display: block;
+}
+
+/* Conteúdo continua disponível se o JavaScript não carregar. */
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+/* Páginas internas simples (Dicas, Marcas Parceiras, Documentos) */
+.pagina-interna {
+    padding: 64px 0;
+}
+
+.pagina-interna h1 {
+    margin-bottom: 16px;
+    color: var(--cor-escura);
+}
+
+.menu-ancoras, .dicas article {
+    margin-top: 32px;
+    padding: 24px;
+    border: 1px solid #e3e8ec;
+    border-radius: 16px;
+    background-color: white;
+}
+
+.menu-ancoras ol {
+    columns: 2;
+    padding-left: 24px;
+}
+
+.menu-ancoras li {
+    margin: 8px 0;
+}
+
+.menu-ancoras a, .dicas a {
+    color: var(--cor-2);
+    font-weight: 700;
+}
+
+.dicas article h2 {
+    margin-bottom: 12px;
+    color: var(--cor-escura);
+}
+
+.dicas article p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .menu-ancoras ol { columns: 1; }
 }
