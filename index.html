@@ -16,13 +16,17 @@
         <a href="#topo" class="logo">
             <img src="img/LogoSoftBike.jpeg" alt="Logo SoftBike">
         </a>
-        <nav>
-            <ul class="listahorizontal">
-                <li><a href="#topo">Início</a></li>
+        <nav aria-label="Navegação principal">
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+            <ul class="listahorizontal" id="menu-principal">
+                <li><a href="#topo" aria-current="page">Início</a></li>
+                <li><a href="#produtos">Produtos</a></li>
                 <li><a href="#diferenciais">Diferenciais</a></li>
                 <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="dicas.html">Dicas de Segurança</a></li>
                 <li><a href="#nossaslojas">Nossas Lojas</a></li>
                 <li><a href="empresa.html">Sobre Nós</a></li>
+                <li><a href="parceiros.html">Marcas Parceiras</a></li>
                 <li><a href="documentos.html">Documentos</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
@@ -51,20 +55,31 @@
         <div class="container">
             <h2>Modelos em destaque</h2>
 
+            <div class="filtro-modelos" hidden>
+                <label for="faixa-etaria">Filtrar por faixa etária:</label>
+                <select id="faixa-etaria">
+                    <option value="todos">Todas as idades</option>
+                    <option value="12">Aro 12 (2 a 4 anos)</option>
+                    <option value="16">Aro 16 (5 a 7 anos)</option>
+                    <option value="20">Aro 20 (8 a 11 anos)</option>
+                </select>
+                <p id="resultado-modelos" aria-live="polite"></p>
+            </div>
+
             <div class="cartoes">
-                <article class="produto">
+                <article class="produto" data-faixa="12">
                     <div class="produto_imagem"> <img src="img/bicicleta_aro12.jpg" alt=""> <span>Aro 12</span></div>
                     <h3>Aro 12 — Primeiros pedais</h3>
                     <p>Ideal para os primeiros pedais, de 2 a 4 anos.</p>
                 </article>
 
-                <article class="produto">
+                <article class="produto" data-faixa="16">
                     <div class="produto_imagem"> <img src="img/bicicleta_aro16.jpg" alt=""> <span>Aro 16</span></div>
                     <h3>Aro 16 — Infantil</h3>
                     <p>Equilíbrio e diversão para crianças de 5 a 7 anos.</p>
                 </article>
 
-                <article class="produto">
+                <article class="produto" data-faixa="20">
                     <div class="produto_imagem"> <img src="img/bicicleta_aro20.jpg" alt=""> <span>Aro 20</span></div>
                     <h3>Aro 20 — Juvenil</h3>
                     <p>Mais autonomia para os pedais de 8 a 11 anos.</p>
@@ -110,20 +125,86 @@
             <div class="cartoes">
 
                 <article class="cartao">
-                    <img src="https://images.icon-icons.com/1826/PNG/512/4202091logonikeshoessocialsocialmedia-115597_115704.png" alt="Nike Logo">
-                    <h3>Nike</h3>
+                    <a href="https://www.nike.com.br" target="_blank" rel="noopener" class="link-patrocinador">
+                        <img src="https://placehold.co/200x150/ffffff/049c8a?text=Logo+Nike" alt="Nike Logo">
+                        <h3>Nike</h3>
+                    </a>
                 </article>
                 <article class="cartao">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROFe7rHsm1WQPnWpWZWi0FH8msE-My6L-C_Onh2D6xow&s=10" alt="Centauro Logo">
-                    <h3>Centauro</h3>
+                    <a href="https://www.centauro.com.br" target="_blank" rel="noopener" class="link-patrocinador">
+                        <img src="https://placehold.co/200x150/ffffff/049c8a?text=Logo+Centauro" alt="Centauro Logo">
+                        <h3>Centauro</h3>
+                    </a>
                 </article>
                 <article class="cartao">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrGItD0ogmmxOeVy0XSCasPfnFMOb0sQoejdyd6uz_hw&s=10" alt="Decathlon Logo">
-                    <h3>Decathlon</h3>
+                    <a href="https://www.decathlon.com.br" target="_blank" rel="noopener" class="link-patrocinador">
+                        <img src="https://placehold.co/200x150/ffffff/049c8a?text=Logo+Decathlon" alt="Decathlon Logo">
+                        <h3>Decathlon</h3>
+                    </a>
                 </article>
                 <article class="cartao">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTHDiXBEpIXkRYg0yFimq88UJhOQMXPuGDdwGT5B6XE3IP45eWTCLQLdY&s=10" alt="Chiquinho Logo">
+                    <img src="https://placehold.co/200x150/ffffff/049c8a?text=Logo+Chiquinho" alt="Chiquinho Logo">
                     <h3>Chiquinho</h3>
+                </article>
+                <article class="cartao">
+                    <a href="https://caloi.com" target="_blank" class="link-patrocinador">
+                        <img src="https://placehold.co/200x150/ffffff/049c8a?text=Logo+Caloi" alt="Caloi Logo">
+                        <h3>Caloi</h3>
+                    </a>
+                </article>
+                <article class="cartao">
+                    <a href="https://www.specialized.com" target="_blank" class="link-patrocinador">
+                        <img src="https://placehold.co/200x150/ffffff/049c8a?text=Logo+Specialized" alt="Specialized Logo">
+                        <h3>Specialized</h3>
+                    </a>
+                </article>
+                <article class="cartao">
+                    <a href="https://www.trekbikes.com" target="_blank" class="link-patrocinador">
+                        <img src="https://placehold.co/200x150/ffffff/049c8a?text=Logo+Trek" alt="Trek Logo">
+                        <h3>Trek</h3>
+                    </a>
+                </article>
+                <article class="cartao">
+                    <a href="https://bike.shimano.com" target="_blank" class="link-patrocinador">
+                        <img src="https://placehold.co/200x150/ffffff/049c8a?text=Logo+Shimano" alt="Shimano Logo">
+                        <h3>Shimano</h3>
+                    </a>
+                </article>
+                <article class="cartao">
+                    <a href="https://www.garmin.com" target="_blank" class="link-patrocinador">
+                        <img src="https://placehold.co/200x150/ffffff/049c8a?text=Logo+Garmin" alt="Garmin Logo">
+                        <h3>Garmin</h3>
+                    </a>
+                </article>
+                <article class="cartao">
+                    <a href="https://www.strava.com" target="_blank" class="link-patrocinador">
+                        <img src="https://placehold.co/200x150/ffffff/049c8a?text=Logo+Strava" alt="Strava Logo">
+                        <h3>Strava</h3>
+                    </a>
+                </article>
+                <article class="cartao">
+                    <a href="https://gopro.com" target="_blank" class="link-patrocinador">
+                        <img src="https://placehold.co/200x150/ffffff/049c8a?text=Logo+GoPro" alt="GoPro Logo">
+                        <h3>GoPro</h3>
+                    </a>
+                </article>
+                <article class="cartao">
+                    <a href="https://www.adidas.com.br" target="_blank" class="link-patrocinador">
+                        <img src="https://placehold.co/200x150/ffffff/049c8a?text=Logo+Adidas" alt="Adidas Logo">
+                        <h3>Adidas</h3>
+                    </a>
+                </article>
+                <article class="cartao">
+                    <a href="https://br.puma.com" target="_blank" class="link-patrocinador">
+                        <img src="https://placehold.co/200x150/ffffff/049c8a?text=Logo+Puma" alt="Puma Logo">
+                        <h3>Puma</h3>
+                    </a>
+                </article>
+                <article class="cartao">
+                    <a href="https://www.redbull.com" target="_blank" class="link-patrocinador">
+                        <img src="https://placehold.co/200x150/ffffff/049c8a?text=Logo+Red+Bull" alt="Red Bull Logo">
+                        <h3>Red Bull</h3>
+                    </a>
                 </article>
             </div>
         </div>
@@ -152,7 +233,7 @@
             </div>
         </div>
     </footer>
-    <button id="botaoTopo" class="botao-topo" aria-label="Voltar ao topo">↑</button>
+    <button id="botaoTopo" class="botao-topo" aria-label="Voltar ao topo" hidden type="button">↑</button>
     <script src="script.js"></script>
 </body>
 </html>
