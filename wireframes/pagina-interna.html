@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe — Modelo de página interna</title>
+    <style>
+        body { margin: 0; background: #f2f2f2; padding: 24px; }
+        body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; color: #222; }
+        .label { font-size: 11px; color: #8a8a8a; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 10px; font-weight: 700; }
+        .box { border: 1px solid #bbb; }
+        .imgph { background: repeating-linear-gradient(45deg, #e2e2e2, #e2e2e2 9px, #eeeeee 9px, #eeeeee 18px); border: 1px solid #bbb; }
+        .line { height: 9px; background: #cfcfcf; border-radius: 2px; }
+        .btn { border: 1.5px solid #444; padding: 10px 22px; font-size: 12px; color: #333; border-radius: 4px; display: inline-block; }
+        .navitem { font-size: 12px; color: #444; border: 1px solid #ccc; border-radius: 3px; padding: 4px 9px; background: #fafafa; }
+        .card { border: 1px solid #bbb; border-radius: 6px; background: #fff; padding: 16px; }
+    </style>
+</head>
+<body>
+<div style="width:1100px; background:#ffffff; padding:32px 40px 60px; box-sizing:border-box;">
+
+  <div class="label">Header (idêntico em todas as páginas, com o item atual destacado)</div>
+  <div class="box" style="display:flex; align-items:center; justify-content:space-between; padding:14px 20px; gap:16px; flex-wrap:wrap; margin-bottom:36px;">
+    <div class="imgph" style="width:110px; height:34px; flex-shrink:0;"></div>
+    <div style="display:flex; gap:8px; flex-wrap:wrap; flex-grow:1;">
+      <div class="navitem">Início</div>
+      <div class="navitem">Produtos</div>
+      <div class="navitem">Diferenciais</div>
+      <div class="navitem">Galeria</div>
+      <div class="navitem" style="background:#10324a; color:#fff; border-color:#10324a;">Página atual</div>
+      <div class="navitem">Nossas Lojas</div>
+      <div class="navitem">Sobre Nós</div>
+      <div class="navitem">Marcas Parceiras</div>
+      <div class="navitem">Documentos</div>
+      <div class="navitem">Contato</div>
+    </div>
+    <div class="btn" style="flex-shrink:0;">Fale Conosco</div>
+  </div>
+
+  <div class="label">Título da página + descrição curta</div>
+  <div style="margin-bottom:30px;">
+    <div class="line" style="width:180px; height:14px; background:#049c8a; margin-bottom:14px;"></div>
+    <div class="line" style="width:320px; height:24px; margin-bottom:12px;"></div>
+    <div class="line" style="width:70%;"></div>
+  </div>
+
+  <div class="label">Usado em Dicas de Segurança — índice de âncoras para pular direto a uma seção</div>
+  <div class="card" style="margin-bottom:30px;">
+    <div class="line" style="width:80px; height:12px; margin-bottom:12px;"></div>
+    <div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 24px;">
+      <div class="line" style="width:80%;"></div><div class="line" style="width:70%;"></div>
+      <div class="line" style="width:75%;"></div><div class="line" style="width:65%;"></div>
+      <div class="line" style="width:70%;"></div><div class="line" style="width:80%;"></div>
+    </div>
+  </div>
+
+  <div class="label">Usado em Sobre Nós e Dicas de Segurança — blocos de conteúdo empilhados, cada um com link "voltar ao início"</div>
+  <div style="display:flex; flex-direction:column; gap:16px; margin-bottom:30px;">
+    <div class="card">
+      <div class="line" style="width:40%; height:12px; margin-bottom:8px;"></div>
+      <div class="line" style="width:95%; margin-bottom:5px;"></div>
+      <div class="line" style="width:88%; margin-bottom:10px;"></div>
+      <div class="line" style="width:110px; height:8px; background:#049c8a;"></div>
+    </div>
+    <div class="card">
+      <div class="line" style="width:40%; height:12px; margin-bottom:8px;"></div>
+      <div class="line" style="width:95%; margin-bottom:5px;"></div>
+      <div class="line" style="width:88%; margin-bottom:10px;"></div>
+      <div class="line" style="width:110px; height:8px; background:#049c8a;"></div>
+    </div>
+  </div>
+
+  <div class="label">Usado em Marcas Parceiras — grade de cartões com link externo</div>
+  <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; margin-bottom:36px;">
+    <div class="card"><div class="line" style="width:55%; height:12px; margin-bottom:8px;"></div><div class="line" style="width:90%;"></div></div>
+    <div class="card"><div class="line" style="width:55%; height:12px; margin-bottom:8px;"></div><div class="line" style="width:90%;"></div></div>
+    <div class="card"><div class="line" style="width:55%; height:12px; margin-bottom:8px;"></div><div class="line" style="width:90%;"></div></div>
+    <div class="card"><div class="line" style="width:55%; height:12px; margin-bottom:8px;"></div><div class="line" style="width:90%;"></div></div>
+  </div>
+
+  <div class="label">Rodapé (idêntico em todas as páginas)</div>
+  <div class="box" style="background:#0b2436; color:#fff; padding:30px 24px; border-radius:8px; display:grid; grid-template-columns:1.2fr 1fr 1.4fr; gap:24px;">
+    <div>
+      <div class="line" style="width:110px; height:14px; background:#fff; margin-bottom:10px;"></div>
+      <div class="line" style="width:95%; background:#4a6172;"></div>
+    </div>
+    <div>
+      <div class="line" style="width:70px; height:12px; background:#fff; margin-bottom:10px;"></div>
+      <div class="line" style="width:85%; background:#4a6172; margin-bottom:6px;"></div>
+      <div class="line" style="width:75%; background:#4a6172;"></div>
+    </div>
+    <div>
+      <div class="line" style="width:150px; height:12px; background:#fff; margin-bottom:10px;"></div>
+      <div class="line" style="width:90%; background:#4a6172; margin-bottom:6px;"></div>
+      <div class="line" style="width:80%; background:#4a6172; margin-bottom:6px;"></div>
+      <div class="line" style="width:60%; background:#4a6172;"></div>
+    </div>
+  </div>
+
+  <div style="display:flex; justify-content:flex-end; margin-top:16px;">
+    <div class="box" style="width:40px; height:40px; border-radius:50%; background:#10324a; color:#fff; display:flex; align-items:center; justify-content:center; font-size:14px;">↑</div>
+  </div>
+</div>
+</body>
+</html>
+
